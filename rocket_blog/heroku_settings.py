@@ -22,7 +22,7 @@ BASE_DIR = os.path.abspath(os.path.join(SITE_ROOT, ".."))
 
 # Heroku platform settings.
 
-HEROKU_APP_NAME = "{{ app_name }}"
+HEROKU_APP_NAME = "northdacoder.herokuapp.com"
 
 HEROKU_BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python.git"
 

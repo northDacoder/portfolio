@@ -1,1 +1,1 @@
-web: gunicorn swift.wsgi --log-file -
+web: gunicorn rocket_blog.wsgi --log-file -

@@ -34,7 +34,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 )
 
-ACCOUNT_ACTIVATION_DAYS = 7
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

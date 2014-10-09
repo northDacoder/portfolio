@@ -102,11 +102,6 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, "static", *MEDIA_URL.strip("/").split("/
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-#
-# TEMPLATE_DIRS = (
-#     '/ Users / northdacoder / projects / rocket_blog/blog/static/templates/',
-# )
-
 
 
 try:
