@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Life @ RocketU Bootcamp Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Nixie+One|Lilita+One|Codystar|Poiret+One|Life+Savers|Rokkitt|Josefin+Slab|Fredoka+One|Monoton|Arbutus|Press+Start+2P|Changa+One|Ranchers|Wallpoet|Raleway+Dots|Black+Ops+One|Cherry+Swash|Montserrat+Subrayada|Montserrat|Gorditas|Hind|Slabo+13px|Sancreek|Allerta+Stencil|Text+Me+One|McLaren|Wellfleet|Special+Elite|Love+Ya+Like+A+Sister|Gruppo|Bowlby+One+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/rocket.css' %}" >
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="container-fluid">
+        <div class="row">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

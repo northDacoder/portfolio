@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+    {% block content %}
+
+
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="text-center"> Life @ <i class="fa fa-rocket"></i><br> <span id="rocket">Rocket</span><span id="u">U</span></h1>
+        </div>
+
+        {% for post in posts %}
+            <div class="col-sm-8 col-sm-offset-2 well blog-container">
+                <div class="post">
+                    <h2 class="text-left"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+
+                    <h3 class="text-center">{{post.description}}</h3>
+
+                    <h4 class="text-right">Posted on <span class="label label-primary"><time datetime="{{post.created|date:"c"}}"> {{post.created|date}} </time></span><h4>
+
+                    <p class="lead">{{ post.content }}</p>
+
+                </div>
+            </div>
+        {% endfor %}
+
+
+    {% endblock %}
+

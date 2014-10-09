@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+        <div class="col-sm-4 col-sm-offset-4" id="login-form">
+            <h1 class="text-center" id="form-login">Log me in Scotty.</h1>
+
+            <form id="login_form" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label class="label-control">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Username" value="" size="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="label-control">Password</label>
+                    <input type="password" name="password" class="form-control" value="" placeholder="Password" size="50" />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default btn-block btn-lg">Login <i class="fa fa-rocket"></i></button>
+                </div>
+            </form>
+        </div>
+
+
+        <script type="text/javascript">
+            $("input").addClass('form-control');
+            $("label").addClass('label-control');
+            $("input#id_picture").addClass('btn btn-lg btn-info');
+        </script>
+    {% endblock %}

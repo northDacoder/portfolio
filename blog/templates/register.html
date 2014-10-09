@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+
+            <h1 class="text-center"><i class="fa fa-rocket"></i> Rocketu Blog Registration</h1>
+
+            {% if registered %}
+
+                <div class="col-sm-4 col-sm-offset-4" id="registration-form">
+                    <h1 class="text-center" id="form-register">thank you for registering!</h1>
+                    <a href="{% url 'home' %}" class="btn btn-success btn-block btn-lg"><i class="fa fa-home"></i> Take me home.</a>
+                </div>
+
+            {% else %}
+
+                <div class="col-sm-4 col-sm-offset-4" id="registration-form">
+                    <h1 class="text-center" id="form-register">register here!</h1><br>
+                    <form id="user_form" role="form" method="post" action="{% url 'register' %}" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+
+                        {% for field in user_form %}
+                            <div class="form-group">
+                                <label class="label-control">{{ field.label_tag }}</label><br>
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+
+
+
+                        {% for field in profile_form %}
+                            <div class="form-group">
+                                <label class="label-control">{{ field.label_tag }}</label><br>
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+
+                        <button type="submit" class="btn btn-lg btn-block btn-default">Lets write <i class="fa fa-pencil"></i></button>
+
+                    </form>
+                </div>
+
+
+            {% endif %}
+
+
+        <script type="text/javascript">
+            $("input").addClass('form-control');
+            $("label").addClass('label-control');
+            $("input#id_picture").addClass('btn btn-lg btn-info');
+        </script>
+    {% endblock %}
