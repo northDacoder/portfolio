@@ -5,7 +5,7 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     url(r'^$', 'blog.views.home', name='home'),
-    url(r'^$', 'blog.views.profile', name='profile'),
+    # url(r'^$', 'blog.views.profile', name='profile'),
     # url(r'^(?P<slug>[\w\-]+)/$', 'blog.views.post'),
     url(r'^profile/(?P<user>.+)/$', 'blog.views.profile', name='Profile'),
     url(r'^login/$', 'blog.views.user_login', name='login'),
