@@ -1,40 +1,6 @@
-{% load static %}
-
-body {
-    min-height: 900px;
-    background: url('../img/yetipavan.jpg') no-repeat center center fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-}
-
-.navbar-fixed-top {
-    border-bottom: 0;
-}
 
 
-.container-fluid {
-    margin-top: 0px;
-    background: rgba(45,159,231,.6);
-    background: rgba(0,0,0,.5);
-    background: rgba(50,245,189,.4);
-    background: rgba(50, 90, 115, .6);
-    height: 900px;
-    width: 100%;
-}
-
-.container-fluid h1 {
-    margin-top: 150px;
-    margin-bottom: 70px;
-    font-family: 'Nixie One', cursive;
-    color: rgba(255,255,255,1);
-    /*color: greenyellow;*/
-    font-size: 50px;
-    font-weight: 100;
-}
-
-
-
+.navbar-fixed-top {border-bottom: 0;}
 #navbar-top a {
     color: #3c3c3c;
     text-shadow: none;
@@ -49,17 +15,9 @@ body {
     padding: 20px 50px;
 }
 
-span#rocket {
-    font-size: 100px;
-    color: midnightblue;
-    color: rgba(6,22,59,1);
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: 0px 0px 50px #eee;
-}
+
 span#u {
     font-size: 100px;
-    color: darkred;
     color: rgba(86,0,0,1);
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
@@ -102,12 +60,10 @@ h1#form-register {
 
 #registration-form {
     margin-top: 0px;
-    background: rgba(0,0,0,1);
     background: rgba(50, 245, 189, .7);
     background: rgba(0,0,0,.7);
     border-radius: 12px;
     padding: 30px;
-    /*border: 3px solid #eee;*/
     box-shadow: 0px 0px 5px #333;
 }
 
@@ -130,12 +86,9 @@ h1#form-login {
 
 #login-form {
     margin-top: 150px;
-    background: rgba(0,0,0,1);
     background: rgba(50, 245, 189, .7);
-    /*background: rgba(0,0,0,.7);*/
     border-radius: 12px;
     padding: 30px;
-    /*border: 3px solid #eee;*/
     box-shadow: 0px 0px 5px #333;
 }
 

@@ -59,41 +59,39 @@ span#rocket {
 }
 span#u {
     font-size: 100px;
-    color: darkred;
     color: rgba(86,0,0,1);
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     text-shadow: 0px 0px 50px #eee;
 }
-.well h2.text-left a {
-    padding: 0;
+/*.well h2.text-left a {*/
+    /*padding: 0;*/
+    /*font-family: 'Nixie One', cursive;*/
+    /*color: #3c3c3c;*/
+/*}*/
 
-    font-family: 'Nixie One', cursive;
-    color: #3c3c3c;
-}
+/*.well h3.text-center {*/
+    /*font-family: 'Nixie One', cursive;*/
+    /*font-size: 18px;*/
+/*}*/
 
-.well h3.text-center {
-    font-family: 'Nixie One', cursive;
-    font-size: 18px;
-}
+/*.well h4.text-right {*/
+    /*font-family: 'Nixie One', cursive;*/
+    /*font-size: 16px;*/
+    /*position: absolute;*/
+    /*right: 0px;*/
+    /*bottom: -5px;*/
+/*}*/
 
-.well h4.text-right {
-    font-family: 'Nixie One', cursive;
-    font-size: 16px;
-    position: absolute;
-    right: 0px;
-    bottom: -5px;
-}
+/*.well span.label-primary {*/
+    /*border-radius: 0;*/
+    /*padding: 8px 10px;*/
+/*}*/
 
-.well span.label-primary {
-    border-radius: 0;
-    padding: 8px 10px;
-}
-
-.well p.lead {
-    font-family: 'Nixie One', cursive;
-    font-size: 15px;
-}
+/*.well p.lead {*/
+    /*font-family: 'Nixie One', cursive;*/
+    /*font-size: 15px;*/
+/*}*/
 
 h1#form-register {
     margin-top: 0px;

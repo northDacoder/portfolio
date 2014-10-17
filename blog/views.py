@@ -9,14 +9,21 @@ from blog.forms import UserForm, UserProfileForm
 from blog.models import Post
 
 
+
 def home(request):
     posts = Post.objects.filter(published=True)
     return render(request, 'home.html', {'posts': posts})
 
 
+def presentation(request):
+    return render(request, 'presentation.html')
+
+
+
 def post(request, slug):
     post = Post.objects.filter(slug=slug)
     return render(request, 'post.html', {'post': post})
+
 
 
 def register(request):

@@ -1,5 +1,5 @@
 
-{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,29 +15,28 @@
     <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing|Cherry+Cream+Soda|Josefin+Sans:100,400|Rokkitt|Graduate|Pacifico|Special+Elite|Playball|Sancreek' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="{% static 'css/code-editor.css' %}" type="text/css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/devicons/1.4.0/css/devicons.min.css">
+    <link rel="stylesheet" href="css/code-editor.css" type="text/css">
 
     <!-- Css Styles -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/styles.css' %}" rel='stylesheet' type='text/css'>
-    <link href="{% static 'css/popup.css' %}" rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+    <link href='css/popup.css' rel='stylesheet' type='text/css'>
+    <link href='css/codepen.sass' rel='stylesheet' type='text/sass'>
 
-    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
     <script type='text/javascript' src='//cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
     <script type='text/javascript'
         src='http://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js'></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADfN8HExgqO8NLvZOFRleYahFFp1IG2tI&sensor=false"></script>
 
     <script type="text/javascript" src="js/firebase.js"></script>
-    <script type="text/javascript" src="{% static 'js/popup.js' %}"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
 
 </head>
 
@@ -58,19 +57,31 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav pull-right">
+                <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li class="page-scroll"><a href="#mission" class="navlink">Mission</a></li>
-                    <li class="page-scroll"><a href="#develop" class="navlink">Develop</a></li>
-                    <li class="page-scroll"><a href="#learn" class="navlink">Learn</a></li>
-                    <li class="page-scroll"><a href="#contact" class="navlink">Contact</a></li>
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#mission" class="navlink">Mission</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#develop" class="navlink">{{ Develop }}</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#learn" class="navlink">Learn</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" class="navlink">Contact</a>
+                    </li>
+
+
                 </ul>
-                <!--<ul style="list-style-type: none;">
+                <ul style="list-style-type: none;">
                     <li class="pull-right">
                         <a id="googleLogin" class="btn btn-lg btn-block btn-success"><i class="fa fa-rocket"></i> Login</a>
                     </li>
-                </ul>-->
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
 
@@ -127,7 +138,7 @@
                 <h1 class="text-center">Who are we?</h1>
                     <div class="row">
                         <div class="col-sm-6">
-                            <center><img src="{% static 'img/johnyeti.png' %}" class="img-responsive img-circle" id="johnny"></center>
+                            <center><img src="img/johnyeti.png" class="img-responsive img-circle" id="johnny"></center>
                             <div id="johnnyOverlay">
                                 <a href="http://www.github.com/northdacoder">
                                     <i class="fa fa-github" id="github-icon"></i>
@@ -147,11 +158,11 @@
         </div>
     </section>
 
-    <!--<section style="position: absolute; background: #384047; height: 50px; width: 100%; z-index: 10000000; margin-bottom: -50px;">
+    <section style="position: absolute; background: #384047; height: 50px; width: 100%; z-index: 10000000; margin-bottom: -50px;">
 
-    </section>-->
+    </section>
 
-    <!--<section id="develop" class="develop-section">
+    <section id="develop" class="develop-section">
         <p data-height="448" data-theme-id="0" data-slug-hash="sobkc" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/imagineux/pen/sobkc/'>Typing animation- Pretty</a> by Matthew Van Dusen (<a href='http://codepen.io/imagineux'>@imagineux</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
       <!--  <div class="code-editor"><span class="control"></span><span class="control"></span><span class="control"></span>
@@ -216,9 +227,9 @@
                 </li>
               </ol>
             </pre>
-          </div>
+          </div> -->
         <script async src="http://codepen.io/assets/embed/ei.js"></script>
-    </section>-->
+    </section>
 
     <section id="learn" class="learn-section">
         <div class="row" id="learnOverlay"></div>
@@ -334,186 +345,3 @@
 
 
 
-
-
-{#{% load staticfiles %}#}
-{#<!DOCTYPE html>#}
-{#<html>#}
-{#<head lang="en">#}
-{#    <title>Northdacoder</title>#}
-{#    <meta charset="utf-8">#}
-{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">#}
-{##}
-{#    <!-- GOOGLE FONTS -->#}
-{#    <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing|Cherry+Cream+Soda|Josefin+Sans:100,400|Rokkitt|Graduate|Pacifico|Special+Elite|Playball|Sancreek' rel='stylesheet' type='text/css'>#}
-{#    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">#}
-{#    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>#}
-{#    <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Nixie+One|Lilita+One|Codystar|Poiret+One|Life+Savers|Rokkitt|Josefin+Slab|Fredoka+One|Monoton|Arbutus|Press+Start+2P|Changa+One|Ranchers|Wallpoet|Raleway+Dots|Black+Ops+One|Cherry+Swash|Montserrat+Subrayada|Montserrat|Gorditas|Hind|Slabo+13px|Sancreek|Allerta+Stencil|Text+Me+One|McLaren|Wellfleet|Special+Elite|Love+Ya+Like+A+Sister|Gruppo|Bowlby+One+SC' rel='stylesheet' type='text/css'>#}
-{##}
-{#    <!-- BOOTSTRAP CSS -->#}
-{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">#}
-{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">#}
-{##}
-{#    <!-- CSS ASSETS -->#}
-{#    <link rel="stylesheet" href="{% static 'css/scrolling-nav.css' %}" type="text/css">#}
-{#    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">#}
-{#    <link rel="stylesheet" href="{% static 'css/popup.css' %}" type="text/css">#}
-{#    <link rel="stylesheet" href="{% static 'css/northdacoder.css' %}" type="text/css">#}
-{##}
-{##}
-{#    <!-- FONT AWESOME ICONS -->#}
-{#    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">#}
-{#    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">#}
-{##}
-{#    <!-- BOOTSTRAP JAVASCRIPT -->#}
-{#    <script src="{% static 'js/jquery-1.10.2.js' %}" type="text/javascript"></script>#}
-{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>#}
-{##}
-{#    <script src="{% static 'js/jquery.easing.min.js' %}" type="text/javascript"></script>#}
-{#    <script src="{% static 'js/scrolling-nav.js' %}" type="text/javascript"></script>#}
-{#    <script src="{% static 'js/popup.js' %}" type="text/javascript"></script>#}
-{##}
-{#    {% block additional_headers %}#}
-{##}
-{#    {% endblock %}#}
-{#</head>#}
-{#<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">#}
-{##}
-{#    {% include 'navbar.html' %}#}
-{##}
-{#    <section id="intro" class="intro-section">#}
-{#        <div class="container-fluid" id="landingHeader">#}
-{#            <div class="row">#}
-{#                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">#}
-{#                    <div class="moving-zone" id="moving-zonend">#}
-{#                        <div class="popup" id="popupnd">#}
-{#                            <div class="popup-content">#}
-{#                                <div class="popup-text">#}
-{#                                    NORTHDA<span style="color: lime;">CODE<b id="pipeBlink">|</b></span>R <br/>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-{##}
-{#    <div class="container-fluid">#}
-{#        {% block content %}#}
-{##}
-{##}
-{#        {% endblock %}#}
-{#    </div>#}
-{##}
-{#    <!-- <section class="nav-section" style="margin: 0; padding: 0;">#}
-{#        <div class="container-fluid">#}
-{#             <div class="row" id="navbuttons">#}
-{#                <div class="col-xs-3">#}
-{#                    <a class="btn btn-success btn-lg btn-block outline" href="https://www.github.com/northdacoder" id="social-github"><small><i class="fa fa-github"></i> Github</small></a>#}
-{#                </div>#}
-{#                <div class="col-xs-3">#}
-{#                    <a class="btn btn-primary btn-lg btn-block outline" href="https://twitter.com/northDacoder" id="social-twitter"><small><i class="fa fa-twitter"></i> Follow</small></a>#}
-{#                </div>#}
-{##}
-{##}
-{#                 <div class="col-xs-3">#}
-{#                    <a class="btn btn-info btn-lg btn-block outline" href="https://twitter.com/northDacoder" id="social-twitter"><small><i class="fa fa-briefcase"></i> Portfolio</small></a>#}
-{#                </div>#}
-{##}
-{#                <div class="col-xs-3">#}
-{#                    <a class="btn btn-primary btn-lg btn-block outline" href="https://twitter.com/northDacoder" id="hireme"><small><i class="fa fa-rocket"></i> Hire Me</small></a>#}
-{#                </div>#}
-{#             </div>#}
-{#        </div>#}
-{#    </section> -->#}
-{#    <div class="container-fluid">#}
-{#        <div class="row" id="missionOverlay">#}
-{#            <div class="col-sm-4 col-sm-offset-4" id="profile">#}
-{#                <h1 class="text-center">Who are we?</h1>#}
-{#                <center><img src="{% static 'img/johnyeti.png' %}" class="img-responsive img-circle" id="johnny"></center>#}
-{#                <div id="johnnyOverlay">#}
-{#                    <a href="http://www.github.com/northdacoder">#}
-{#                        <i class="fa fa-github" id="github-icon"></i>#}
-{#                    </a>#}
-{#                    <a href="http://www.twitter.com/northdacoder">#}
-{#                        <i class="fa fa-twitter" id="twitter-icon"></i>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <h1>John Ryan</h1><h2>Founder :: Lead Developer</h2>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#    <section id="mission" class="mission-section">#}
-{#        <div class="container-fluid">#}
-{#            <div class="row" id="missionOverlay">#}
-{#                <div class="col-sm-4 col-sm-offset-4" id="profile">#}
-{#                    <h1 class="text-center">Who are we?</h1>#}
-{#                    <center><img src="{% static 'img/johnyeti.png' %}" class="img-responsive img-circle" id="johnny"></center>#}
-{#                    <div id="johnnyOverlay">#}
-{#                        <a href="http://www.github.com/northdacoder">#}
-{#                            <i class="fa fa-github" id="github-icon"></i>#}
-{#                        </a>#}
-{#                        <a href="http://www.twitter.com/northdacoder">#}
-{#                            <i class="fa fa-twitter" id="twitter-icon"></i>#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <h1>John Ryan</h1><h2>Founder :: Lead Developer</h2>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-{##}
-{##}
-{#    <!--<section id="develop" class="develop-section">#}
-{#        <p data-height="448" data-theme-id="0" data-slug-hash="sobkc" data-default-tab="result" class='codepen'></p>#}
-{#        <script async src="http://codepen.io/assets/embed/ei.js"></script>#}
-{#    </section>-->#}
-{##}
-{#    <!--<section id="learn" class="learn-section">#}
-{#        <div class="row" id="learnOverlay"></div>#}
-{#    </section>-->#}
-{##}
-{##}
-{#    <div class="container-fluid" id="contact" style="padding: 0; position: relative; margin: 0;">#}
-{#        <div id="map-canvas" ></div>#}
-{#        <div class="row" style="position: absolute; top: 00px; background: rgba(0,46,57,.0); width: 100%; height: 100%; margin: 0; padding: 0;">#}
-{#            <div class="col-sm-4 col-sm-offset-1" id="mapText">#}
-{#                <h1 class="text-center"><i class="fa fa-map-marker"></i> Palo Alto, CA</h1>#}
-{#                <p class="text-center">We are always looking for opportunities to create projects that push the limits of the web.</p>#}
-{#                <p class="text-center">Drop us a line on <a href="http://www.twitter.com/northdacoder"><i class="fa fa-twitter"></i> Twitter</a>, stop by for <i class="fa fa-coffee"></i>, or <a href="mailto:northdacoder@gmail.com"><i class="fa fa-envelope"></i> email</a> us</p>#}
-{#            </div>#}
-{#            <div class="col-sm-4 col-sm-offset-2" id="mapForm">#}
-{#<!--                 <h1 class="text-center"><i class="fa fa-phone"></i> Drop a line</h1>#}
-{# -->                <form class="form-vertical" role="form">#}
-{#                    <div class="form-group">#}
-{#<!--                         <label class="label-control">Name</label>#}
-{# -->                        <input class="form-control input-lg" placeholder="Name">#}
-{#                    </div>#}
-{#                    <div class="form-group">#}
-{#<!--                         <label class="label-control">Email</label>#}
-{# -->                        <input class="form-control input-lg" placeholder="Email">#}
-{#                    </div>#}
-{#                    <div class="form-group">#}
-{#<!--                         <label class="label-control">Phone</label>#}
-{# -->                        <input class="form-control input-lg" placeholder="Phone">#}
-{#                    </div>#}
-{#                    <div class="form-group">#}
-{#                        <button class="btn btn-info btn-lg btn-block">Send</button>#}
-{#                    </div>#}
-{#                </form>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</body>#}
-{#</html>#}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
