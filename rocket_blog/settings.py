@@ -54,6 +54,10 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
 
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Northdacoder Console'
+}
+
 ROOT_URLCONF = 'rocket_blog.urls'
 
 WSGI_APPLICATION = 'rocket_blog.wsgi.application'
@@ -109,6 +113,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 try:
     from local_settings import *
