@@ -223,6 +223,9 @@ b {
 
 
 @media (max-width: 778px) {
+    #missionOverlay {
+        background: white;
+    }
     #landingHeader.container-fluid {
         height: 100%;
     }
