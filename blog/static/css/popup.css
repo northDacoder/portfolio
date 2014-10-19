@@ -8,7 +8,7 @@
 }
 
 #popupnd {
-    margin-top: 200px;
+    margin-top: 140px;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -72,13 +72,15 @@
 
 #profile {
     background: #eee;
+    background: white;
     margin-top: 40px;
     padding: 10px 30px 10px 0;
     color: #3c3c3c;
+    color: rgba(0,0,0,.4);
 }
 
 #profile h1 {
-    font-family: 'Special Elite', sans-serif;
+    /*font-family: 'Special Elite', sans-serif;*/
 }
 
 #johnny {
@@ -105,6 +107,11 @@
     margin-bottom: -180px;
 }
 
+#johnnyOverlay > .row {
+    position: relative;
+    top: 55px;
+}
+
 #johnnyOverlay:hover {
     background: rgba(23,66,87,.8);
     z-index: 100000;
@@ -116,7 +123,12 @@
 }
 
 #johnnyOverlay i {
-    padding: 60px 8px;
+    width: 70px;
+    /*padding: 60px 8px;*/
+}
+
+#johnnyOverlay i:first-child {
+    margin-left: 25px;
 }
 
 #missionOverlay {
@@ -126,7 +138,8 @@
 }
 
 #missionOverlay h1, #missionOverlay h2, #missionOverlay h3, #missionOverlay p {
-    font-family: 'Sancreek', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
 }
 
 #missionOverlay p {
