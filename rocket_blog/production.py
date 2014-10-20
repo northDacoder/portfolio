@@ -49,13 +49,14 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.messages.context_processors.messages',
-)
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Northdacoder Console'
+}
 
 ROOT_URLCONF = 'rocket_blog.urls'
 
@@ -103,7 +104,7 @@ AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 
-STATICFILES_STORAGE = 'goheroku.s3utils.StaticRootS3BotoStorage'
+STATICFILES_STORAGE = 'rocket_blog.s3utils.StaticRootS3BotoStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 S3_URL = '//{}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
 
@@ -111,6 +112,3 @@ MEDIA_URL = S3_URL + "media/"
 STATIC_URL = S3_URL + "static/"
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
-
-
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]

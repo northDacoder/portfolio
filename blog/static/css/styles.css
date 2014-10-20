@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
@@ -9,8 +11,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 #intro {
-    background-image: url(../img/bluebottle.jpg);
-    background-image: url(../img/keepshipping.jpg);
+    background-image: url({{ STATIC_URL }}img/bluebottle.jpg);
+    background-image: url({{ STATIC_URL }}img/keepshipping.jpg);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
