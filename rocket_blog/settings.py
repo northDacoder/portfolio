@@ -50,6 +50,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.messages.context_processors.messages',
+)
+
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )

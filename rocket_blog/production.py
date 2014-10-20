@@ -47,6 +47,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.messages.context_processors.messages',
+)
+
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
@@ -79,30 +84,32 @@ USE_TZ = True
 
 
 
-# Allow all host headers
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "static", *MEDIA_URL.strip("/").split("/"))
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 
-
-# Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
 ALLOWED_HOSTS = ['*']
-
-# Static asset configuration
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+
+STATICFILES_STORAGE = 'goheroku.s3utils.StaticRootS3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = '//{}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
+
+MEDIA_URL = S3_URL + "media/"
+STATIC_URL = S3_URL + "static/"
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
+
 
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]

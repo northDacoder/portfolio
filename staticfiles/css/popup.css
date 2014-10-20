@@ -6,9 +6,8 @@
     margin: 20px 0 0 0;
     perspective: 800px;
 }
-
 #popupnd {
-    margin-top: 200px;
+    margin-top: 140px;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -22,7 +21,6 @@
     background: linear-gradient(top left, rgba(34,149,181, .7) 25%, rgba(255,255,255,.7) 50%);
     box-shadow: 0px 0px 20px rgba(0,0,0,1);
 }
-
 #popupnd .popup-content {
     background: rgba(0,0,0,.8);
     padding: 30px;
@@ -30,7 +28,6 @@
     box-sizing: border-box;
     border-radius: 12px 0 12px 0;
 }
-
 #popupnd .popup-text {
     color: white;
     font-family: 'Josefin Sans', cursive;
@@ -41,7 +38,6 @@
     margin-top: 10px;
     transform: translateZ(15px);
 }
-
 .popup:before {
     content: '';
     position: absolute;
@@ -54,14 +50,12 @@
     box-shadow: 0 0 40px 20px rgba(0,0,0,.1);
     transform: translateZ(-100px);
 }
-
 .popup-content {
     background: #444;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px 0 10px 0;
 }
-
 #pipeBlink {
     color: lime;
     font-weight: 300;
@@ -71,14 +65,14 @@
 }
 
 #profile {
-    background: #eee;
+    background: white;
     margin-top: 40px;
-    padding: 10px 30px 10px 0;
+    padding: 10px 0 10px 0;
     color: #3c3c3c;
+    color: rgba(0,0,0,.4);
 }
-
 #profile h1 {
-    font-family: 'Special Elite', sans-serif;
+    /*font-family: 'Special Elite', sans-serif;*/
 }
 
 #johnny {
@@ -91,7 +85,6 @@
     -webkit-box-shadow: 0px 0px 3px #333;
     box-shadow: 0px 0px 3px #333;
 }
-
 #johnnyOverlay {
     background: rgba(85,172,238,0);
     position: relative;
@@ -104,7 +97,10 @@
     transition: .3s ease-out;
     margin-bottom: -180px;
 }
-
+#johnnyOverlay > .row {
+    position: relative;
+    top: 55px;
+}
 #johnnyOverlay:hover {
     background: rgba(23,66,87,.8);
     z-index: 100000;
@@ -114,9 +110,12 @@
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow: inset 0 0 10px #000000;
 }
-
 #johnnyOverlay i {
-    padding: 60px 8px;
+    width: 70px;
+    /*padding: 60px 8px;*/
+}
+#johnnyOverlay i:first-child {
+    margin-left: 25px;
 }
 
 #missionOverlay {
@@ -124,11 +123,10 @@
     width: 100%;
     margin: 0;
 }
-
 #missionOverlay h1, #missionOverlay h2, #missionOverlay h3, #missionOverlay p {
-    font-family: 'Sancreek', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
 }
-
 #missionOverlay p {
     font-size: 18px;
 }
@@ -138,29 +136,24 @@
     font-size: 70px;
     transition: .3s ease-out;
 }
-
 #twitter-icon:hover {
     color: rgba(255,255,255,1);
     transition: .1s ease-in;
 }
-
 #github-icon {
     color: rgba(255,255,255,.5);
     font-size: 70px;
     transition: .3s ease-out;
 }
-
 #github-icon:hover {
     color: rgba(255,255,255,1);
     transition: .1s ease-in;
 }
-
 .twitter-bg {
     background: url('img/twitter-bg.png');
     background-position: 0 0;
     background-repeat: no-repeat;
 }
-
 .github-bg {
     background: url('img/github-bg.png');
     background-position: 0 0;
@@ -210,6 +203,9 @@ b {
 
 
 @media (max-width: 778px) {
+    #missionOverlay {
+        background: white;
+    }
     #landingHeader.container-fluid {
         height: 100%;
     }
