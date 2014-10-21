@@ -118,6 +118,24 @@
     margin-left: 25px;
 }
 
+.demo { background:#fff;height:940px; }
+.demo .holder {}
+.demo .cont { margin-left: 400px; padding: 160px 0; }
+.demo .background { position: absolute; height: 100%; width:300px;}
+.demo .background div {position: absolute; background: url('../img/github-bg.png') 100% 27% no-repeat;right: 0;height:940px;width: 1180px;margin: 0;}
+.demo .button { background:#fff; border:2px solid #303336 !important; font-size:18px;color:#303336; padding:16px 28px; display:inline-block; margin-top:38px;font-weight:600;}
+.demo .button:hover { background:#303336 !important;border:2px solid #303336 !important;color:#fff !important}
+.demo h2 { font-size:20px;margin-bottom: 25px; color:#303336;}
+.demo p { font-size:20px;color:#696f6f;}
+.demo p strong { display:inline-block; width:26px;}
+.demo ul { position:relative; top:95px;}
+.demo li { display:inline-block; width:320px;}
+.demo li p { margin-bottom:0;font-size:16px}
+.demo li p strong {color:#303336;}
+.demo .forksandstars {float:right;}
+.mobile .forksandstars { height: 50px;overflow: hidden;position:relative;top:14px;width.components .cont, .samples .cont;}
+
+
 #missionOverlay {
     height: 100%;
     width: 100%;

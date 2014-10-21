@@ -25,6 +25,9 @@ def post(request, slug):
     return render(request, 'post.html', {'post': post})
 
 
+def flight(request):
+    return render(request, 'flight.html')
+
 
 def register(request):
     context = RequestContext(request)
